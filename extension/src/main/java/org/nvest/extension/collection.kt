@@ -1,4 +1,4 @@
-package com.nvest.extension
+package org.nvest.extension
 
 fun <K, V> MutableMap<K, V>.clearAndPutAll(from: Map<out K, V>) {
     this.clear()

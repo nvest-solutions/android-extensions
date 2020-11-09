@@ -1,4 +1,4 @@
-package com.nvest.extension
+package org.nvest.extension
 
 import kotlin.math.roundToLong
 

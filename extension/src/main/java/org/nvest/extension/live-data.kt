@@ -1,4 +1,4 @@
-package com.nvest.extension
+package org.nvest.extension
 
 import android.os.Looper
 import androidx.lifecycle.LifecycleOwner

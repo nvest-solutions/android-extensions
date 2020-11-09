@@ -1,4 +1,4 @@
-package com.nvest.extension
+package org.nvest.extension
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

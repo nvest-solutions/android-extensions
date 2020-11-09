@@ -1,4 +1,4 @@
-package com.nvest.extension
+package org.nvest.example.androidinternallibrary
 
 import org.junit.Test
 

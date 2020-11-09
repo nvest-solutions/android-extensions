@@ -1,4 +1,4 @@
-package com.nvest.example.androidinternallibrary
+package org.nvest.example.androidinternallibrary
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

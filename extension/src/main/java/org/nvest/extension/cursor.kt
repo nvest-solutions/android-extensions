@@ -1,4 +1,4 @@
-package com.nvest.extension
+package org.nvest.extension
 
 import android.database.Cursor
 import androidx.core.database.getDoubleOrNull
