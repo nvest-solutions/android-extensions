@@ -16,7 +16,7 @@ android {
         minSdkVersion 17
         targetSdkVersion 30
         versionCode 1
-        versionName extensionLibVersion
+        versionName extensionVersion
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -59,7 +59,7 @@ bintray {
         userOrg = 'nvest-solutions'
         publish true
         version {
-            name = extensionLibVersion
+            name = extensionVersion
         }
     }
 }
@@ -69,7 +69,7 @@ publishing {
         ExtensionPublication(MavenPublication) {
             groupId bintrayGroupId
             artifactId project.name
-            version extensionLibVersion
+            version extensionVersion
             artifact "$buildDir\\outputs\\aar\\${project.name}-release.aar"
         }
     }

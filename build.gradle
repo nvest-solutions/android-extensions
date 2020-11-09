@@ -6,7 +6,7 @@ buildscript {
 
 
         // internal libraries versions
-        extensionLibVersion = '1.0'
+        extensionVersion = '0.1'
     }
     repositories {
         google()
