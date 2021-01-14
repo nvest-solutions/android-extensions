@@ -1,7 +1,6 @@
 package org.nvest.extension
 
 import android.os.Looper
-import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
 
 fun <T> MutableLiveData<T>.setData(t: T) {
