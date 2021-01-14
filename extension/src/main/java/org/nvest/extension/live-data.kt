@@ -22,11 +22,3 @@ fun <T> MutableLiveData<T>.clear() {
         this.postValue(null)
     }
 }
-
-@Deprecated("Avoid using this method. Will probably be removed soon.")
-fun <T> MutableLiveData<T>.removeObserversIfAny(owner: LifecycleOwner) {
-    if (this.hasObservers()) {
-        this.hasActiveObservers()
-        this.removeObservers(owner)
-    }
-}

@@ -27,7 +27,7 @@ fun Cursor.getIntegerList(columnName: String): List<Int> {
         ?.split(',')
     val valueList = mutableListOf<Int>()
     commaSeparatedValueStrList?.forEach { value ->
-        if (!value.isBlank() && value.isNotEmpty()) {
+        if (value.isNotBlank() && value.isNotEmpty()) {
             valueList.add(value.toInt())
         }
     }

@@ -5,6 +5,11 @@ fun <K, V> MutableMap<K, V>.clearAndPutAll(from: Map<out K, V>) {
     this.putAll(from)
 }
 
+fun <E> MutableList<E>.clearAndAddAll(elements: Collection<E>): Boolean {
+    this.clear()
+    return this.addAll(elements)
+}
+
 fun Map<Int, Map<String, String>>.toCsv(): String {
     val csvBuilder = StringBuilder()
 
@@ -27,4 +32,8 @@ fun Map<Int, Map<String, String>>.toCsv(): String {
     }
 
     return csvBuilder.toString()
+}
+
+fun <V> Map<String, V>.getIgnoreCase(key: String): V {
+    return this.filter { it.key.equals(key, true) }.entries.first().value
 }
