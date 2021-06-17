@@ -1,6 +1,5 @@
 # android-extensions
-[ ![Download](https://api.bintray.com/packages/nvest-solutions/android/extension/images/download.svg) ](https://bintray.com/nvest-solutions/android/extension/_latestVersion)
-
+<img src="https://img.shields.io/maven-central/v/io.github.nvest-solutions/android-extension" />
 Contains many Kotlin extension functions that the developer might need on day-to-day basis
 
 ## Download
