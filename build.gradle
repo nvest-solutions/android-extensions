@@ -27,7 +27,7 @@ buildscript {
             }
 
             scm {
-                url "https://bitbucket.org/nvest-solutions/android-internal-libraries"
+                url "https://github.com/nvest-solutions/android-extensions.git"
             }
         }
     }
