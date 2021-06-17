@@ -1,35 +1,14 @@
 apply plugin: 'io.github.gradle-nexus.publish-plugin'
+apply from: "${rootDir}/scripts/publish-root.gradle"
 
 buildscript {
     ext {
         kotlin_version = '1.4.21'
-        bintrayGroupId = 'org.nvest.android'
 
 
         // internal libraries versions
-        extensionVersion = '0.4'
+        extensionVersion = '1.0.0'
 
-        // default pom config
-        pomConfig = {
-            licenses {
-                license {
-                    name "The Apache Software License, Version 2.0"
-                    url "http://www.apache.org/licenses/LICENSE-2.0.txt"
-                    distribution "repo"
-                }
-            }
-            developers {
-                developer {
-                    id "danishansari"
-                    name "Danish Ansari"
-                    email "danish.ansari@nvest.in"
-                }
-            }
-
-            scm {
-                url "https://github.com/nvest-solutions/android-extensions.git"
-            }
-        }
     }
 
     repositories {
