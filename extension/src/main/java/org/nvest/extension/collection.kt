@@ -10,7 +10,7 @@ fun <E> MutableList<E>.clearAndAddAll(elements: Collection<E>): Boolean {
     return this.addAll(elements)
 }
 
-fun Map<Int, Map<String, String>>.toCsv(): String {
+fun Map<Int, Map<String, String>>.toCsv(csvSeparator: Char = ','): String {
     val csvBuilder = StringBuilder()
 
 
@@ -18,20 +18,20 @@ fun Map<Int, Map<String, String>>.toCsv(): String {
     val headerBuilder = StringBuilder()
     for ((_, monthData) in this.entries) {
         for ((keywords) in monthData.entries) {
-            headerBuilder.append(keywords).append(",")
+            headerBuilder.append(keywords).append(csvSeparator)
         }
         break
     }
-    csvBuilder.append(headerBuilder.toString().removeSuffix(","))
+    csvBuilder.append(headerBuilder.toString().removeSuffix(csvSeparator.toString()))
         .appendLine()
 
     // add values
     for ((_, monthData) in this.entries) {
         val bodyBuilder = StringBuilder()
         for ((_, value) in monthData.entries) {
-            bodyBuilder.append(value).append(",")
+            bodyBuilder.append(value).append(csvSeparator)
         }
-        csvBuilder.append(bodyBuilder.toString().removeSuffix(","))
+        csvBuilder.append(bodyBuilder.toString().removeSuffix(csvSeparator.toString()))
 
         // don't add new line after the last entry
         if (this.entries.last().value.entries.last().value != monthData.entries.last().value) {

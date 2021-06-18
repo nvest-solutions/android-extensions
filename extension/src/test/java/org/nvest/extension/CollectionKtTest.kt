@@ -42,6 +42,23 @@ Avocado,Berry,Cherry
     }
 
     @Test
+    fun `Map is converted to CSV with semi-colon separator`() {
+        val firstMap = mapOf("A" to "Apple", "B" to "Banana", "C" to "Coconut")
+        val secondMap = mapOf("A" to "Avocado", "B" to "Berry", "C" to "Cherry")
+        val csvMap = mapOf(1 to firstMap, 2 to secondMap)
+
+        val result = csvMap.toCsv(csvSeparator = ';')
+
+        assertThat(result).isEqualTo(
+            """
+A;B;C
+Apple;Banana;Coconut
+Avocado;Berry;Cherry
+        """.trimIndent()
+        )
+    }
+
+    @Test
     fun `Map returns value with case-insensitive key`() {
         val mutableMap = mutableMapOf("One" to 1)
 
