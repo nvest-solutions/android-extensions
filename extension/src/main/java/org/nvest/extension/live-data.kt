@@ -2,7 +2,9 @@ package org.nvest.extension
 
 import android.os.Looper
 import androidx.lifecycle.MutableLiveData
+import org.nvest.extension.core.NvestInternalApi
 
+@NvestInternalApi
 fun <T> MutableLiveData<T>.setData(t: T) {
     val isUiThread = Looper.myLooper() == Looper.getMainLooper()
     if (isUiThread) {
@@ -12,7 +14,7 @@ fun <T> MutableLiveData<T>.setData(t: T) {
     }
 }
 
-
+@NvestInternalApi
 fun <T> MutableLiveData<T>.clear() {
     val isUiThread = Looper.myLooper() == Looper.getMainLooper()
     if (isUiThread) {
