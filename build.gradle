@@ -3,11 +3,11 @@ apply from: "${rootDir}/scripts/publish-root.gradle"
 
 buildscript {
     ext {
-        kotlin_version = '1.4.21'
+        kotlin_version = '1.5.10'
 
 
         // internal libraries versions
-        extensionVersion = '1.0.0'
+        extensionVersion = '1.1.0'
 
     }
 
@@ -19,7 +19,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.1'
+        classpath 'com.android.tools.build:gradle:4.2.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'io.github.gradle-nexus:publish-plugin:1.1.0'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.5'
