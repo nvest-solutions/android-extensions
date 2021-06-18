@@ -13,3 +13,5 @@ fun Double.round(precision: Int): Double {
 fun String?.isNumber(): Boolean {
     return !this.isNullOrEmpty() && !this.isNullOrBlank() && this.matches("-?\\d+(\\.\\d+)?(E-?\\d+)?(E\\+?\\d+)?(E?\\d+)?(e-?\\d+)?(e\\+?\\d+)?(e?\\d+)?".toRegex())
 }
+
+fun String?.isNotNumber() = !isNumber()

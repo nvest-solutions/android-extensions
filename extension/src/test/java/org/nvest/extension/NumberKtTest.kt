@@ -48,4 +48,13 @@ class NumberKtTest {
 
         assertThat(result).isFalse
     }
+
+    @Test
+    fun `some string is not a number`() {
+        val input = "a"
+
+        val result = input.isNotNumber()
+
+        assertThat(result).isTrue
+    }
 }
